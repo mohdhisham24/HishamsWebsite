@@ -1,0 +1,458 @@
+/*Import fonts*/
+
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+/*Do css reset*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section{
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+/* Navbar styles */
+nav{
+    font:300 1rem Poppins;
+    position:fixed;
+    right: 2.5vw;
+    top: 5vh;
+    z-index: 10;
+    width: 10vw;
+}
+nav ul{
+    list-style-position: outside;
+    text-align: center;
+    line-height: 2rem;
+    list-style-type:none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.active-nav{
+    font-weight: 700;
+}
+/* Utility styles */
+
+.sliding-button {
+    display: inline-flex;
+    border-radius: 0.3em;
+    border: 0.1rem solid black;
+    padding: 0.6em 1.2em;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, #ffffff 50%, #000000 50%);
+    transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.sliding-button:hover {
+    color: #000;
+    background-position: -100% 0;
+}
+
+
+    
+
+/* Hero section styles */
+
+.hero-container{
+    margin: 5rem auto auto 5rem;
+}
+
+.hero-container h2{
+    font:100 2em 'Poppins', sans-serif;
+    color:#000;
+    opacity: 0.2;
+    margin-top: 5rem;
+    
+                                               
+}
+.hero-container h1{     
+    
+    font:700 6em Poppins;
+    text-align: left;
+    line-height: 0.8em;
+   
+
+}
+.hero-container p{
+    margin-top: 0.5em;
+    width: 30rem;
+    font:300 1.2em 'SF Pro Display', sans-serif;
+                                                
+}
+
+.hero-social{
+    height: 1.5em;
+    margin-right: 2em;
+    margin-top: 5em;
+}
+.hero-logo{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap:1em;
+    img{
+        display: inline-block;
+    }
+
+}
+.hero-logo     .img-info{
+    display: inline-block;
+    
+    font:300 1em 'SF Pro Display';
+    padding-bottom: 0.5em;
+    
+}
+
+
+
+
+
+
+
+/* Rotating text styles */
+
+.circle{
+    float: right;
+    margin-right: 13vw;
+    font-family: 'SF Pro Display';
+    position:  relative;
+    width: 10rem;
+    height: 10rem;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: anim 10s linear infinite;
+}
+@keyframes anim {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+.text span{
+    position: absolute;
+    left: 50%;
+    font-size: 1em;
+    transform-origin: 0 5rem;
+}
+.arrow_down{
+    
+    animation: bounce 2.5s linear infinite;
+}
+@keyframes bounce{
+    0%{ 
+        transform:rotate(-90deg) translateX(0rem);
+    }25%{
+        transform:rotate(-90deg)  translateX(-0.5rem);
+    }50%{
+        transform:rotate(-90deg)  translateX(0rem);
+    }75%{
+        transform:rotate(-90deg)  translateX(0.5rem);
+    }100%{
+        transform:rotate(-90deg)  translateX(0rem);
+    }
+}
+
+
+/* Water mark text styles */
+
+.watermark{
+    position: relative;
+    margin-left: 0.1em;
+    font:700 10em Poppins;
+    opacity: 0.1;
+    margin-bottom: 5rem;
+
+}
+/* .stroke-text-watermark {
+    position: relative;
+    top:-6rem;
+    font:700 10em Poppins;
+    color: #fff; /* Text color *//*
+    opacity: 0.1;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000,
+     0    0   1px #000; 
+}
+ */
+
+
+/* Journey styles */
+
+.journey-table{
+    margin-left: auto;
+    margin-right: auto;
+    
+    /*border: 1px solid red;*/
+}
+.journey-title-desc{
+    padding-left: 0.5em;
+    font:700 1rem Poppins;
+    /*border: 1px solid red;*/
+    
+    
+
+}
+.journey-logo{
+align-self: center;
+padding-top: 0.3em;
+height: 1.7em;
+/*border: 1px solid red;*/
+
+}
+
+.line{
+    /*border: 1px solid red;*/
+   border-right:1px #000 solid; 
+   width: 1em;
+   
+
+  
+}
+.journey-desc{
+    padding-left: 1em;
+    width: 20em;
+    font: 300 0.8rem Poppins;
+    /*border: 1px solid red;*/
+    padding-bottom: 4rem;
+    
+}
+
+/* work-styles  */
+
+.work-container{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 66vw;
+    
+}
+.work-title{
+    font:700 2em Poppins;
+    margin-bottom: 0.8em;
+    margin-top: 1em;
+}
+.work-n{
+    color: #fff; /* Text color */
+    opacity: 0.8;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000,
+     0    0   1px #000; 
+    margin-right: 0.3em;
+}
+.work-content{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+}
+
+.work-img{
+    width:30vw;
+}
+.work-description{
+    font:300 1em Poppins;
+}
+
+.read-more-work{
+    font:300 0.8em Poppins;
+    text-decoration: underline;
+    margin-right: 2em;
+    color: #2c2c2c;
+}
+
+.demo-btn{
+    margin-top: 1em;
+}
+
+.more-btn-container{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.more-btn{
+    background-color: transparent;
+    color: #000;
+    padding: 0.5em 1.2em 0.5em 1.2em ;
+    border:0.1em solid #000;
+    border-radius: 0.25em;
+    -moz-border:0.1em solid #000;
+    -moz-border-radius: 0.25em;
+    margin-top: 3em;
+    display: inline-flex;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, #000 50%, #fff 50%);
+    transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.more-btn:hover {
+    color: #ffffff;
+    background-position: -100% 0;
+}
+
+
+/* Literature styles*/
+.literature-container{
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 2em;
+    margin-left: 15vw;
+   
+}
+.literature{
+    position: relative;
+}
+.literature-title{
+    font: 700 1.2em Poppins;
+    margin-bottom: 1em;
+}
+.literature-description{
+    font:300 0.8em Poppins;
+}
+.literature-download{
+    position: absolute;
+    right: 1.2rem;
+}
+
+
+
+/*Talk styles*/
+.talk-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3em;
+    width: 70vw;
+    margin: 0 auto 6rem auto;
+}
+.talk-para{
+    font:300 0.8rem Poppins;
+}
+.talk-img{
+    width: 25vw;
+    
+}
+/* Footer styles */
+
+footer{
+    position: relative;
+    background-color: #000;
+    min-height: 40vh;
+}
+.footer-watermark{
+    position: absolute;
+    top: -0.55em;
+    color:#fff;
+    position: relative;
+    margin-left: 0.1em;
+    font:700 10em Poppins;
+    opacity: 0.2;
+
+}
+
+.footer-nav{
+        font:300 1rem Poppins;
+        position:absolute;
+        right: 5vh;
+        top: 5vh;
+        z-index: 10;
+    }
+.footer-nav ul{
+        list-style-position: outside;
+        text-align: center;
+        line-height: 2rem;
+        list-style-type:none;
+    }
+.footer-nav ul li a{
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.footer-social-container{
+    position: absolute;
+    top: 9rem;
+    left: 25vw;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1.2rem;
+    column-gap: 2rem;
+
+}
+.social-item{
+    display: flex;
+    align-items: center;
+}
+.footer-social-ico{
+    display: inline-block;
+    height: 1.2em;
+
+}
+.footer-social-desc{
+    display: inline-block;
+    color:#fff;
+    font:300 0.8em Poppins;
+    margin-left: 1em;
+}
+
+.footer-copyright{
+    position: absolute;
+    top: 15rem;
+    margin-left:33vw;
+    margin-bottom: 5rem;
+    color: #fff;
+    opacity: 0.6;
+    font: 300 0.8rem Poppins;
+}
+.footer-sep{
+    position: absolute;
+    top: 14.4rem;
+    left: 28vw;
+    color: #fff;
+    width: 40vw;
+    opacity: 0.6;
+}
+
+.shoutout{
+    color: #fff;
+    background-color: #2c2c2c;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    text-decoration: none;
+
+}
