@@ -16,11 +16,22 @@ html{
 }
 body{
     font-family: 'Times New Roman', Times, serif;
+    background-color: #0F0F0F;
+    color: #fff;
 }
 
 section{
     min-height: 80vh;
-    overflow: hidden;
+
+    position: relative;
+}
+
+/*sectags*/
+
+.sectags{
+    position: absolute;
+    
+
 }
 
 /* Navbar styles */
@@ -41,7 +52,7 @@ nav ul{
 
 nav ul li a{
     text-decoration: none;
-    color: #000;
+    color: white;
 }
 
 .active-nav{
@@ -72,54 +83,22 @@ nav ul li a{
 
 /* Hero section styles */
 
-.hero-container{
-    margin: 5rem auto auto 5rem;
-}
+#landing{
+    position: relative;
 
-.hero-container h2{
-    font:100 2em 'Poppins', sans-serif;
-    color:#000;
-    opacity: 0.2;
-    margin-top: 5rem;
-    
-                                               
-}
-.hero-container h1{     
-    
-    font:700 6em Poppins;
-    text-align: left;
-    line-height: 0.8em;
-   
 
 }
-.hero-container p{
-    margin-top: 0.5em;
-    width: 30rem;
-    font:300 1.2em 'SF Pro Display', sans-serif;
-                                                
+
+.mypic{
+    position: absolute  ;
+    top: 10em;
+    left: 50em;
 }
 
-.hero-social{
-    height: 1.5em;
-    margin-right: 2em;
-    margin-top: 5em;
-}
-.hero-logo{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap:1em;
-    img{
-        display: inline-block;
-    }
-
-}
-.hero-logo     .img-info{
-    display: inline-block;
-    
-    font:300 1em 'SF Pro Display';
-    padding-bottom: 0.5em;
-    
+.comment{
+    position: absolute;
+    top: 39em;
+    left: 64em;
 }
 
 
@@ -212,6 +191,9 @@ nav ul li a{
 .journey-table{
     margin-left: auto;
     margin-right: auto;
+    color: #fff;
+    padding-top: 20em;
+    
     
     /*border: 1px solid red;*/
 }
@@ -223,18 +205,21 @@ nav ul li a{
     
 
 }
+
 .journey-logo{
 align-self: center;
 padding-top: 0.3em;
 height: 1.7em;
 /*border: 1px solid red;*/
+padding-left: 0.25em;
 
 }
 
 .line{
     /*border: 1px solid red;*/
-   border-right:1px #000 solid; 
+   border-right:1px #ffffff solid; 
    width: 1em;
+   
    
 
   
@@ -250,105 +235,39 @@ height: 1.7em;
 
 /* work-styles  */
 
-.work-container{
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 66vw;
-    
-}
-.work-title{
-    font:700 2em Poppins;
-    margin-bottom: 0.8em;
-    margin-top: 1em;
-}
-.work-n{
-    color: #fff; /* Text color */
-    opacity: 0.8;
-    text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,  
-    -1px  1px 0 #000,  
-     1px  1px 0 #000,
-     0    0   1px #000; 
-    margin-right: 0.3em;
-}
-.work-content{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1em;
-}
-
-.work-img{
-    width:30vw;
-}
-.work-description{
-    font:300 1em Poppins;
-}
-
-.read-more-work{
-    font:300 0.8em Poppins;
-    text-decoration: underline;
-    margin-right: 2em;
-    color: #2c2c2c;
-}
-
-.demo-btn{
-    margin-top: 1em;
-}
-
-.more-btn-container{
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.more-btn{
-    background-color: transparent;
-    color: #000;
-    padding: 0.5em 1.2em 0.5em 1.2em ;
-    border:0.1em solid #000;
-    border-radius: 0.25em;
-    -moz-border:0.1em solid #000;
-    -moz-border-radius: 0.25em;
-    margin-top: 3em;
-    display: inline-flex;
-    background-size: 200% 100%;
-    background-image: linear-gradient(to left, #000 50%, #fff 50%);
-    transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.more-btn:hover {
-    color: #ffffff;
-    background-position: -100% 0;
-}
-
-
 /* Literature styles*/
 .literature-container{
-    width: 70vw;
+    width: 50vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 2rem;
-    column-gap: 2em;
-    margin-left: 15vw;
+    row-gap: 2vw;
+    column-gap: 2.5vw;
+    margin-left: 25vw;
+    padding-top:27em;
+    
    
 }
 .literature{
     position: relative;
 }
 .literature-title{
+
     font: 700 1.2em Poppins;
     margin-bottom: 1em;
 }
 .literature-description{
     font:300 0.8em Poppins;
+    text-align: justify;
 }
 .literature-download{
     position: absolute;
-    right: 1.2rem;
+    right: 0rem;
 }
 
+.work-img{
+width: 15vw;
+margin-bottom: 1em;
+}
 
 
 /*Talk styles*/
