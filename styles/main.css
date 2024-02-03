@@ -89,6 +89,11 @@ nav ul li a{
 
 }
 
+
+.mains{
+    width: 80vw;
+
+}
 .mypic{
     position: absolute  ;
     top: 10em;

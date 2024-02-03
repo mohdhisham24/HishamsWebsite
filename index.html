@@ -54,10 +54,11 @@
     </div>
   </article>
 </section>
+<section></section>
 <!--Journey section-->
 
   <section id="journey" class="section">
-    <img src="assets/journyy.png" alt="journey" class="sectags">
+    <!-- <img src="assets/journyy.png" alt="journey" class="sectags"> -->
     <table class="journey-table">
 
       <tr class="journy-title-row">
@@ -65,7 +66,7 @@
           <img class="journey-logo" src="icons/default_jouney.svg" alt="a bubble">
 
         </td>
-        <td class="journey-title-desc" colspan="3">MSc Robotics  - UoB</td>
+        <td class="journey-title-desc" colspan="3">XYZ University - Deg</td>
       </tr>
       <tr>
         <td class="line"></td><td ></td><td class="journey-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugiat. Perspiciatis odio delectus nemo sit sint soluta.</td>
@@ -76,7 +77,17 @@
           <img class="journey-logo" src="icons/default_jouney.svg" alt="a bubble">
 
         </td>
-        <td class="journey-title-desc" colspan="3">EDU Efficiency engineer</td>
+        <td class="journey-title-desc" colspan="3">ABC Software engg.</td>
+      </tr>
+      <tr>
+        <td class="line"></td><td ></td><td class="journey-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugiat. Perspiciatis odio delectus nemo sit sint soluta.</td>
+      </tr>
+      <tr class="journy-title-row">
+        <td colspan="2">
+          <img class="journey-logo" src="icons/default_jouney.svg" alt="a bubble">
+
+        </td>
+        <td class="journey-title-desc" colspan="3">XYZ University - Deg</td>
       </tr>
       <tr>
         <td class="line"></td><td ></td><td class="journey-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugiat. Perspiciatis odio delectus nemo sit sint soluta.</td>
@@ -87,29 +98,20 @@
           <img class="journey-logo" src="icons/default_jouney.svg" alt="a bubble">
 
         </td>
-        <td class="journey-title-desc" colspan="3">Industrial Design Engineer</td>
+        <td class="journey-title-desc" colspan="3">ABC Software engg.</td>
       </tr>
       <tr>
-        <td class="line">&nbsp;</td><td >&nbsp;</td><td class="journey-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugiat. Perspiciatis odio delectus nemo sit sint soluta.</td>
+        <td class=""></td><td ></td><td class="journey-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugiat. Perspiciatis odio delectus nemo sit sint soluta.</td>
       </tr>
-      <tr class="journy-title-row">
-        <td colspan="2">
-          <img class="journey-logo" src="icons/default_jouney.svg" alt="a bubble">
-
-        </td>
-        <td class="journey-title-desc" colspan="3">B.Tech Mechanical Engineering</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td><td >&nbsp;</td><td class="journey-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, fugiat. Perspiciatis odio delectus nemo sit sint soluta.</td>
-      </tr>
-
-
+      
     </table>
   </section>
 
 
 
+<section>
 
+</section>
 
 
 
@@ -128,21 +130,36 @@
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
   <script>
     gsap.registerPlugin(ScrollTrigger)
-    const splitTypes =document.querySelectorAll('.watermark')
-    splitTypes.forEach((char,i)=>{
-        const text = new SplitType(char,{types:'chars'})
-        gsap.from(text.chars,{
-            scrollTrigger:{
-                trigger:char,
-                start:'top 80%',
-                end:'top 20%',
+    const paths = document.querySelectorAll('.line');
+    const logos = document.querySelectorAll('.journey-logo');
+    paths.forEach((path, j) => {
+        gsap.from(path, { 
+            rotateX: 90,
+            transformOrigin: "50% 0%",
+            scrollTrigger: {
+                trigger: path, // Use line as the trigger
+                start: 'top 80%',
+                end: 'top 20%',
                 scrub:true,
-                markers:false
+                markers: false
             },
-            opacity:0,
-            stagger: 0.1
-        })
-    })
+
+            stagger: 5,
+        });
+      });
+    logos.forEach((logo,j)=>{
+      gsap.from(logo,{
+        scale:0,scrollTrigger: {
+                trigger: logo, // Use line as the trigger
+                start: 'top 80%',
+                end: 'top 20%',
+                scrub:true,
+                markers: false
+            },
+            stagger: 0.01,
+
+      });
+    });
   </script>
 </body>
 </html>
