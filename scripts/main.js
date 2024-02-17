@@ -59,3 +59,8 @@ window.addEventListener('scroll',()=>{
   
 //   setInterval(getRandomImage, 25000);
 // });
+
+
+
+// mobile nav
+    

@@ -16,9 +16,12 @@ html{
 }
 body{
     font-family: 'Times New Roman', Times, serif;
-    background-color: #0f0f0f;
+    /* background-color: #0f0f0f; */
     color: #fff;
     overflow-x: hidden;
+    background-image: url("/assets/websiteBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section{
@@ -26,7 +29,7 @@ section{
     display: flex;
     position: relative;
     align-items: center;
-    
+  
 }
 
 
@@ -54,6 +57,85 @@ nav ul li a{
 .active-nav{
     font-weight: 700;
 }
+
+/* Photo animation */
+
+.photo-post{
+    transition-delay: 0.1s;
+    transition: all 0.6s ease;
+}
+
+.photo-post:hover{
+    transform: rotate(-5deg)
+    
+}
+/*mobile nav bar  */
+
+.hnav{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 17px;
+}
+
+.hnav .bar{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* mobile art hidden */
+.mbanner{
+    display: none;
+}
+
+/* responisve nav */
+
+@media (max-width:450px){
+    .hnav{
+        display: flex;
+    }
+    .navlist{
+ display: none;
+    }
+ .banner{
+    display: none;
+ }
+.mart{
+    display: block;
+}
+   .photo-post{
+    display: none;
+   }
+   .bouncy-tag{
+    display: none;
+   }
+   .social-container .social-icon{
+    display: none;
+   }
+.section .about{
+    position: absolute  ;
+}
+}
+
+/* for mnav bg */
+.blurbg{
+    top: 0;
+    right: 0;
+    background-color:rgb(3, 112, 255);
+    width: 100%;
+    display: none;
+    height: 100vh;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    
+}
+
 /* Utility styles */
 
 .sliding-button {
@@ -75,23 +157,22 @@ nav ul li a{
 }
 
 
+.social-icon{
+    filter: white;
+    transition: transform 0.3s ease;
+}
+
+.social-container .social-icon:hover{
+transform: scale(1.2);
+filter:   sepia(100%) saturate(3798%) hue-rotate(359deg) brightness(105%) contrast(104%);
+}
 
 
 /* Landing section styles */
 
 
 
-
-#about{
-    /* background-color: rgb(10, 66, 40); */
-    
-    
-  
-    
-
-}
 .cover{
-
     width: 80vw;
     height: 90vh;
 
@@ -135,8 +216,6 @@ nav ul li a{
 
 
 
-
-
 /* Bouncing resume style */
 .bouncy-tag{
     position: absolute;
@@ -173,6 +252,14 @@ nav ul li a{
     
 
 }
+.imageC{
+    color: red;
+}
+
+/* image captions */
+
+
+
 
 
 /* Journey styles */
@@ -182,17 +269,12 @@ nav ul li a{
     margin-right: auto;
     color: #fff;
     padding-top: 4rem;
-    
-    
-    /*border: 1px solid red;*/
 }
+
 .journey-title-desc{
     padding-left: 0.5em;
     font:700 1rem Poppins;
     /*border: 1px solid red;*/
-    
-    
-
 }
 
 .journey-logo{
@@ -252,6 +334,13 @@ margin-bottom: 1em;
 }
 
 
+/* humburg menu */
+
+.hamburg{
+    display: block;
+    width: 25px;
+    
+}
 
 
 /* Art section styles */
@@ -262,9 +351,10 @@ margin-bottom: 1em;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: nowrap;
     /* padding-left:12vw;
     padding-right: 12vw; */
-    gap: 0vw;
+    gap: 2vw;
     /* overflow-x: hidden; */
     overflow-y: hidden;
 }
@@ -273,7 +363,7 @@ margin-bottom: 1em;
     /* background-color: rebeccapurple; */
     display: flex;
     height: 100vh;
-    width: 20vw;
+    width: 15vw;
     
     flex-direction: column;
     justify-content: center;
@@ -286,7 +376,7 @@ margin-bottom: 1em;
     height: 20vh;
     width:100vw;
     z-index: 2;
-    background:linear-gradient(to bottom, #0f0f0f,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
+    background:linear-gradient(to bottom, #000a08bd,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
     /* display: none; */
 
 
@@ -296,7 +386,7 @@ margin-bottom: 1em;
     height: 20vh;
     width:100vw;
     z-index: 2;
-    background:linear-gradient(to top, #0f0f0f,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
+    background:linear-gradient(to top, #000a0893,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
     /* display: none; */
     top:80vh;
 }
@@ -312,21 +402,22 @@ margin-bottom: 1em;
 
 .marquee .imgcontainer{
     /* background-color:rebeccapurple; */
-    width: 20vw;
+    width: 15vw;
     height: 50vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: center;
-    
-
 }
 .imgcontainer img{
     width: 15vw;
+    border: 5px solid rgb(17, 41, 24);
+    border-bottom: 50px solid rgb(17, 41, 24);
 }
 
 .imgcontainer img:hover {
     transition: transform 0.5s ease-in-out;
-    transform: scale(1.4);
+    transform: scale(1.2);
     
 }
 .carousal-container:hover .marquee{
