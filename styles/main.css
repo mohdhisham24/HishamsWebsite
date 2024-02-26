@@ -495,14 +495,14 @@ footer{
     height: 467px;
     position: absolute;
     transform: rotate(-35deg);
-    top: -15vh;
-    left: -30vh;
+    top: -10vh;
+    left: -20vh;
 }
 
 .herocont{
     display: flex;
     flex-direction: column;
-    padding-left: 601px;
+    padding-left: 30vw;
     gap: 15px;
 }
 .social-container{
@@ -517,7 +517,7 @@ footer{
 }
 .oneliner{
     display: flex;
-    font-size: 70px;
+    font-size: 100px;
     font-family: 'Nohemi';
     flex-direction: column;
     width: 100%;
@@ -526,7 +526,7 @@ footer{
     font-weight: bold;
 }
 .name{
-    font-size:medium;
+    font-size:25px;
     padding-bottom:10px ;
 }
 .blue{
