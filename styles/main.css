@@ -19,7 +19,7 @@ body{
     /* background-color: #0f0f0f; */
     color: #fff;
     overflow-x: hidden;
-    background-image: url("/assets/websiteBG.jpg");
+    background-image: url("/assets/websiteBG-black.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -31,6 +31,9 @@ section{
     align-items: center;
   
 }
+
+
+/* new design */
 
 
 /* Navbar styles */
@@ -96,7 +99,7 @@ nav ul li a{
 
 /* responisve nav */
 
-@media (max-width:450px){
+/* @media (max-width:450px){
     .hnav{
         display: flex;
     }
@@ -121,7 +124,7 @@ nav ul li a{
 .section .about{
     position: absolute  ;
 }
-}
+} */
 
 /* for mnav bg */
 .blurbg{
@@ -175,6 +178,8 @@ filter:   sepia(100%) saturate(3798%) hue-rotate(359deg) brightness(105%) contra
 .cover{
     width: 80vw;
     height: 90vh;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -204,14 +209,7 @@ filter:   sepia(100%) saturate(3798%) hue-rotate(359deg) brightness(105%) contra
 
 
 
-.social-container{
-    position: absolute;
-    top: 70vh;
-    left: 15vw;
-    display: flex;
-    flex-direction: row;
-    gap:1.0rem;
-}
+
 
 
 
@@ -306,32 +304,6 @@ padding-left: 0.25em;
 
 /* work-styles  */
 
-.work-container{
-    width: 50vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 2vw;
-    column-gap: 2.5vw;
-    margin-left: 25vw;
-    
-   
-}
-
-.work-title{
-
-    font: 700 1em Poppins;
-    margin-bottom: 1.2em;
-}
-.work-description{
-    font:300 0.8em Poppins;
-    text-align: justify;
-}
-
-
-.work-img{
-width: 15vw;
-margin-bottom: 1em;
-}
 
 
 /* humburg menu */
@@ -511,4 +483,165 @@ footer{
     border-radius: 0.2rem;
     text-decoration: none;
 
+}
+
+
+
+
+/* hero section -ND*/
+
+.wrappertop{
+    
+    height: 467px;
+    position: absolute;
+    transform: rotate(-35deg);
+    top: -15vh;
+    left: -30vh;
+}
+
+.herocont{
+    display: flex;
+    flex-direction: column;
+    padding-left: 601px;
+    gap: 15px;
+}
+.social-container{
+    top: 70vh;
+    left: 15vw;
+    display: flex;
+    flex-direction: row;
+    gap:1.0rem;
+}
+.name{
+ font-weight: lighter;
+}
+.oneliner{
+    display: flex;
+    font-size: 70px;
+    font-family: 'Nohemi';
+    flex-direction: column;
+    width: 100%;
+    border-color: pink;
+    border-radius: 10;
+    font-weight: bold;
+}
+.name{
+    font-size:medium;
+    padding-bottom:10px ;
+}
+.blue{
+    color: #0251D3;
+}
+.yellow{
+    color: #DFFD52;
+}
+
+
+/* work section */
+
+.worksay{
+    top: 0;
+    position: absolute;
+}
+
+.wline{
+    position: absolute;
+    font-family: 'Nohemi';
+    font-size: 34px;
+    width: 350px;
+    top: 12vh;
+    left: 12vh;
+}
+
+
+
+
+.work-container{
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2vw;
+    column-gap: 2.5vw;
+    margin-left: 24vw;
+    
+   
+}
+
+.work-title{
+
+    font: 700 1em Poppins;
+    margin-bottom: 1.2em;
+}
+.work-description{
+    font:300 0.8em Poppins;
+    text-align: justify;
+}
+
+
+.work-img{
+width: 15vw;
+margin-bottom: 1em;
+}
+
+
+
+/* journey */
+
+.jsay{
+    position: absolute;
+    bottom: 10vh;
+    right: 0;
+}
+
+.jline{
+    position: absolute;
+    font-size: 34px;
+    font-family: 'Nohemi';
+    width: 480px;
+    bottom: 18vh;
+    right: 0;
+}
+
+
+
+
+/* art ND */
+
+.asay{
+
+top: 0;
+    position: absolute;
+}
+.aline{
+    position: absolute;
+    font-family: 'Nohemi';
+    font-size: 34px;
+    width: 350px;
+    top: 12vh;
+    left: 12vh;
+}
+
+/* me ND*/
+#me{
+    display: flex;
+    flex-direction: row;
+    gap: 10VW;
+    padding-left: 25vw;
+}
+.summary{
+    gap: 15PX;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    font-family: 'Nohemi';
+    font-size: 30px;
+    width: 390px;
+}
+
+.sumhead{
+    font-size: 35px;
+}
+
+.hispic{
+    height: 50vh;
 }
