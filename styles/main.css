@@ -490,12 +490,11 @@ footer{
 
 /* hero section -ND*/
 
-.wrappertop{
-    
+.wrappertop{  
     height: 467px;
     position: absolute;
     transform: rotate(-35deg);
-    top: -10vh;
+    top: -15vh;
     left: -20vh;
 }
 
@@ -517,7 +516,7 @@ footer{
 }
 .oneliner{
     display: flex;
-    font-size: 100px;
+    font-size: 70px;
     font-family: 'Nohemi';
     flex-direction: column;
     width: 100%;
