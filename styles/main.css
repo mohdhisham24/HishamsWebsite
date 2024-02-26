@@ -383,8 +383,8 @@ padding-left: 0.25em;
 }
 .imgcontainer img{
     width: 15vw;
-    border: 5px solid rgb(17, 41, 24);
-    border-bottom: 50px solid rgb(17, 41, 24);
+    border: 5px solid #D8D9D3;
+    border-bottom: 50px solid #D8D9D3;
 }
 
 .imgcontainer img:hover {
