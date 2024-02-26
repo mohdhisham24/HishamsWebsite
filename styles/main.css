@@ -501,7 +501,7 @@ footer{
 .herocont{
     display: flex;
     flex-direction: column;
-    padding-left: 30vw;
+    padding-left: 33vw;
     gap: 15px;
 }
 .social-container{
