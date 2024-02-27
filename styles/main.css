@@ -4,6 +4,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
+@font-face {
+    font-family: Nohemi;
+    src: url(/fonts/Nohemi-Regular.woff2) format('woff2');
+    font-weight: normal;
+}
+@font-face {
+    font-family: Nohemi;
+    src: url(/fonts/Nohemi-Bold.woff2);
+    font-weight: bold;
+}
+
 /*Do css reset*/
 *{
     margin: 0;
@@ -24,6 +35,16 @@ body{
   background-size: cover;
 }
 
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+  
+  }
+  
+
 section{
     min-height: 100vh;
     display: flex;
@@ -34,16 +55,16 @@ section{
 
 
 /* new design */
-
-
 /* Navbar styles */
 nav{
+    
     font:300 1rem Poppins;
     position:fixed;
     right: 2.5vw;
-    top: 5vh;
+    top: 5rem;
     z-index: 10;
     width: 10vw;
+   
 }
 nav ul{
     list-style-position: outside;
@@ -54,90 +75,80 @@ nav ul{
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 .active-nav{
     font-weight: 700;
 }
 
-/* Photo animation */
-
-.photo-post{
-    transition-delay: 0.1s;
-    transition: all 0.6s ease;
-}
-
-.photo-post:hover{
-    transform: rotate(-5deg)
-    
-}
-/*mobile nav bar  */
-
-.hnav{
+.open-menu ,.close-menu{
     position: absolute;
-    top: .75rem;
-    right: 1rem;
+    top: -2.5rem;
+    right: 3vw;
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 17px;
 }
-
-.hnav .bar{
-    height: 2px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-
-/* mobile art hidden */
-.mbanner{
+#menu-check{
     display: none;
 }
 
-/* responisve nav */
-
-/* @media (max-width:450px){
-    .hnav{
-        display: flex;
-    }
-    .navlist{
- display: none;
-    }
- .banner{
-    display: none;
- }
-.mart{
+.menu-handle{
+    width: 1.2em;
+}
+.menu{
     display: block;
 }
-   .photo-post{
-    display: none;
-   }
-   .bouncy-tag{
-    display: none;
-   }
-   .social-container .social-icon{
-    display: none;
-   }
-.section .about{
-    position: absolute  ;
-}
-} */
+/*Hamburger responsive code */
+@media(max-width:780px){
 
-/* for mnav bg */
-.blurbg{
-    top: 0;
-    right: 0;
-    background-color:rgb(3, 112, 255);
-    width: 100%;
-    display: none;
-    height: 100vh;
-    position: absolute;
-    backdrop-filter: blur(10px);
-    
+    .menu{
+        position: absolute;
+        right: 40vw;
+        top:25vh;
+        display: none;
+        
+    }
+    .open-menu{
+        display: block;
+    }
+
 }
+
+/* Utility styles */
+
+.sliding-button {
+    display: inline-flex;
+    border-radius: 0.3em;
+    border: 0.05rem solid black;
+    padding: 0.4em 1.2em;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, #ffffff 50%, #000000 50%);
+    transition: background-position 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.sliding-button:hover {
+    color: #000;
+    background-position: -100% 0;
+}
+
+.blur-background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    filter: blur(10px); /* Adjust the blur strength as needed */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    display:none;
+    opacity: 0;
+    transition:  opacity 0.1s ease-in-out;
+  }
 
 /* Utility styles */
 
@@ -395,32 +406,7 @@ padding-left: 0.25em;
 .carousal-container:hover .marquee{
     animation-play-state: paused;
 }
-/* #mar1{
-    padding-top: 20vh;
-    img{
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        
-    }
-}
-#mar2{
-    padding-top: 20vh;
-    img{
 
-        margin-top: 3vh;
-        margin-bottom: 7vh;
-        
-    }
-}
-#mar3{
-    padding-top: 25vh;
-    img{
-
-        margin-top: 7vh;
-        margin-bottom: 7vh;
-        
-    }
-} */
 
 @keyframes marqueeAnimation {
     from {
@@ -430,6 +416,12 @@ padding-left: 0.25em;
       transform: translateY(-50vh);
     }
   }
+
+@media(max-width:780px) {
+    .carousals{
+        display: none;
+    }
+}
 
 /* get in touch styles */
 #talk{
@@ -443,6 +435,7 @@ padding-left: 0.25em;
     height: 30vh;
     left: 0;
     bottom: -5vh;
+    display: none;
 }
 .talk-social-container{
     font: 300 0.9rem Poppins;
@@ -496,6 +489,7 @@ footer{
     transform: rotate(-35deg);
     top: -15vh;
     left: -20vh;
+    display: none;
 }
 
 .herocont{
@@ -504,6 +498,8 @@ footer{
     padding-left: 33vw;
     gap: 15px;
 }
+
+
 .social-container{
     top: 70vh;
     left: 15vw;
@@ -535,6 +531,18 @@ footer{
     color: #DFFD52;
 }
 
+
+@media(max-width:780px){
+
+    .herocont{
+        padding:0;
+        margin: 0;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
 
 /* work section */
 
@@ -636,6 +644,11 @@ top: 0;
     font-size: 30px;
     width: 390px;
 }
+@media(max-width:780px) {
+    .summary{
+        width: 40vw;
+    }
+}
 
 .sumhead{
     font-size: 35px;
@@ -643,4 +656,17 @@ top: 0;
 
 .hispic{
     height: 50vh;
+}
+#me{
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width:780px){
+    #me{
+
+        flex-direction: column-reverse;
+    }
+    .work-container{
+        display: none;
+    }
 }

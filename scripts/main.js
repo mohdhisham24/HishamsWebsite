@@ -22,45 +22,42 @@ window.addEventListener('scroll',()=>{
 });
 
 
+//Mobile menu
 
-// function getRandomImage(){
-//   // get image containers
-  
-//   var imageContainers =[ document.getElementById('mar1'),document.getElementById('mar2'),document.getElementById('mar3')];
+function menuClose(params) {
 
-//   imageContainers.forEach((imageContainer)=>{
-
-//       // Remove the first image
-//   var firstImage = imageContainer.firstElementChild;
-//   if (firstImage) {
-//     imageContainer.removeChild(firstImage);
-//   }
-
-
-
-//   var imageFiles = ['boat.jpg', 'confused.jpg', 'flowers.jpg', 'friends.jpg','manbeach.jpg','ullal.jpg'];
-
-//   // Get a random index from the array
-//   var randomIndex = Math.floor(Math.random() * imageFiles.length);
-
-//   // Get the random image file name
-//   var randomImageFile = imageFiles[randomIndex];
-
-//   // Insert a new image at the bottom
-//   var newImage = document.createElement('img');
-//   newImage.src = '/Art/' + randomImageFile;
-//   newImage.alt = 'New Image';
-//   imageContainer.appendChild(newImage);
-//   })
-// }
-
-// // JavaScript code to remove the first image and insert a new image at the bottom
-// document.addEventListener('DOMContentLoaded', function () {
-  
-//   setInterval(getRandomImage, 25000);
-// });
-
-
-
-// mobile nav
     
+  let mediaQuery = window.matchMedia('(max-width: 780px)');
+    if (mediaQuery.matches){    
+  
+      document.querySelector('.menu').style.display = 'none';
+      document.querySelector('.blur-background').style.opacity = 0;
+      document.querySelector('.blur-background').style.display = 'none';
+      document.querySelector('.open-menu').style.display = 'block';
+      document.querySelector('.close-menu').style.display = 'none';
+    }
+    
+  }
+  
+  let mediaQuery = window.matchMedia('(max-width: 780px)');
+  if (mediaQuery.matches){      
+    // console.log(mediaQuery.matches);
+    let responsiveMenuCheck = document.getElementById('menu-check');
+    responsiveMenuCheck.addEventListener('change',()=>{
+                                                        if (responsiveMenuCheck.checked){
+                                                          document.querySelector('.menu').style.display = 'block';
+                                                          document.querySelector('.close-menu').style.display = 'block';
+                                                          document.querySelector('.blur-background').style.display='block';
+                                                          document.querySelector('.blur-background').style.opacity = 1;
+                                                          document.querySelector('.open-menu').style.display = 'none';
+                                                          
+                                                        }
+                                                        else{
+                                                          menuClose();
+                                                        
+                                                        }
+                                                      })
+    }
+  
+  
+  
