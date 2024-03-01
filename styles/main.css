@@ -534,13 +534,13 @@ footer{
     .herocont{
         padding:0;
         margin: 0;
-        width: 100vw;
+        width: 100%;
         padding-left: 4vw;
-        padding-top:8vh;
+        padding-top:5vh;
     }
     .oneliner{
         display: flex;
-        font-size: 70px;
+        font-size: 60px;
         font-family: 'Nohemi';
         flex-direction: column;
         width: 100%;
@@ -567,13 +567,14 @@ footer{
         display: flex;
         flex-direction: row;
         gap:1.0rem;
+        width: 60vw;
     }
     .bouncy-tag{
         position: absolute;
         float: right;
         animation: bounce 2s linear infinite;
         width: 60vw;
-        top:80vh;
+        top:75vh;
         right: 2vw;   
     }
     @keyframes bounce{
