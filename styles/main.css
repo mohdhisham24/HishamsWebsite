@@ -535,7 +535,7 @@ footer{
         padding:0;
         margin: 0;
         width: 100vw;
-        padding-left: 8vw;
+        padding-left: 4vw;
         padding-top:8vh;
     }
     .oneliner{
@@ -558,7 +558,7 @@ footer{
         position: absolute;
         transform: rotate(-35deg);
         top: -7vh;
-        left: -10vh;
+        left: -25vw;
         /* display: none; */
     }
     .social-container{
@@ -574,7 +574,7 @@ footer{
         animation: bounce 2s linear infinite;
         width: 60vw;
         top:80vh;
-        right: 1vw;   
+        right: 2vw;   
     }
     @keyframes bounce{
         0%{ 
@@ -644,10 +644,12 @@ margin-bottom: 1em;
         font-size: 32px;
         width: 350px;
         top: 12vh;
-        left: 7vh;
+        left: 6vh;
     }
      
-    
+    .work-container{
+        display: none;
+    }
  
 }
 
@@ -681,7 +683,7 @@ margin-bottom: 1em;
     .jsay{
         position: absolute;
         bottom: 0vh;
-        right: 0;
+        right: 2vw;
     }
     .journey-table{
         margin-left: auto;
@@ -724,7 +726,7 @@ top: 0;
     font-size: 34px;
     width: 350px;
     top: 12vh;
-    left: 12vh;
+    left: 10vh;
 }
 
 @media(max-width:780px){
@@ -733,10 +735,14 @@ top: 0;
         font-family: 'Nohemi';
         font-size: 32px;
         width: 350px;
-        top: 12vh;
-        left: 7vh;
+        top: 14vh;
+        left: 6vh;
     }
-    
+    .asay{
+
+        top: 0;
+            position: absolute;
+        }
    
 }
 
