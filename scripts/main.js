@@ -58,6 +58,33 @@ function menuClose(params) {
                                                         }
                                                       })
     }
-  
+  if (mediaQuery.matches){
+    document.getElementById('biwiz').textContent ="&business Intelligence";
+    document.getElementById('ninja').textContent ="ninja";
+    let works = document.querySelectorAll('.work');
+    works.forEach(work=>{
+      work.classList.add('swiper-slide');
+      
+    });
+  }
+  //   let workContainer = document.getElementById("w_container");
+        
+  //       // Create div elements with the specified classes
+  //       let swiperWrapper = document.createElement("div");
+  //       swiperWrapper.classList.add('swiper-wrapper');
+
+  //       let swiper = document.createElement("div");
+  //       swiper.classList.add('swiper', 'slide-swiper');
+
+  //       // Append swiperWrapper to swiper, and swiper to workContainer
+  //       swiper.appendChild(swiperWrapper);
+        
+  //               while (workContainer.firstChild) {
+  //                   swiperWrapper.appendChild(workContainer.firstChild);
+  //               }
+  //       workContainer.appendChild(swiper);
+
+     
+  // }
   
   

@@ -33,6 +33,7 @@ body{
     background-image: url("/assets/websiteBG-black.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100vw;
 }
 
 .material-symbols-outlined {
@@ -50,6 +51,8 @@ section{
     display: flex;
     position: relative;
     align-items: center;
+    overflow: hidden;
+    width:100vw ;
   
 }
 
@@ -523,14 +526,28 @@ footer{
 }
 .blue{
     color: #0251D3;
+    display: inline-block;
 }
 .yellow{
     color: #DFFD52;
 }
-
-
+#product{
+    color: #0251D3;
+    display: inline-block;
+    padding-right: 0.2em;
+}
+#ninja{
+    display: block;
+    
+}
 @media(max-width:780px){
-
+    #product{
+        display: block;
+        padding-right: .0.2em;
+    }
+    #ninja{
+        display: inline-block;
+    }
     .herocont{
         padding:0;
         margin: 0;
@@ -637,6 +654,9 @@ footer{
 width: 15vw;
 margin-bottom: 1em;
 }
+.work-swiper{
+    display: none;
+}
 
 @media(max-width:780px){
     .wline{
@@ -651,8 +671,31 @@ margin-bottom: 1em;
     .work-container{
         display: none;
     }
- 
+    .work{
+        display: flex;
+        width: 50vw ;
+        height: 50%;
+    }
+    .work-swiper{
+        display: flex;
+    }
+    .work-description{
+        width: 50vw;
+    }
 }
+
+.swiper-wrapper .work{
+    width: 100vw;
+    margin: 25vh auto 0 auto;
+    padding-left: 10vw;
+    img{
+        width: 50vw;
+        padding-left: 0vw;
+    }
+
+}
+
+
 
 /* journey */
 
@@ -691,16 +734,18 @@ margin-bottom: 1em;
         margin-right: auto;
         color: #fff;
         padding-top: 0;
-        height: 70vh;
-        width: 30vh;
+        width: 60vw;
         font-size: xx-small;
-        height: 60vh;
+        height: 2vh;
     }
-    
+    .journey-desc{
+        padding-bottom: 0.5em;
+    }
     .journey-title-desc{
         padding-left: 0.5em;
         font:900 1rem Poppins;
         /*border: 1px solid red;*/
+        height: 1vh;
     }
     
     .journey-logo{
@@ -711,6 +756,10 @@ margin-bottom: 1em;
     padding-left: 0.25em;
     
     }
+    #journey{
+        align-items: flex-start;
+    }
+
 }
 
 
@@ -771,7 +820,6 @@ top: 0;
 .hispic{
     height: 50vh;
 }
-
 @media(max-width:780px){
     #me{
         flex-direction: column-reverse;
@@ -792,4 +840,42 @@ top: 0;
         width: fit-content;
     }
    
+}
+
+.swiper-article{
+    display: none;
+}
+@media(max-width:780px){
+    .swiper-article
+    {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10vh;
+    }
+
+    .swiper {
+        display: flex;
+      width: 70vw;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .swiper-slide {
+        /* width: 20vw; */
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .mobile-art-img{
+        width: 50vw;
+        border: 5px solid #D8D9D3;
+        border-bottom: 50px solid #D8D9D3;
+    }
+    
 }
