@@ -646,7 +646,8 @@ footer{
 }
 .work-description{
     font:300 0.8em Poppins;
-    text-align: justify;
+    text-align:left;
+    width: 15vw;
 }
 
 
@@ -654,11 +655,21 @@ footer{
 width: 15vw;
 margin-bottom: 1em;
 }
-.work-swiper{
-    display: none;
+
+
+.swiper-wrapper{
+    display: flex;
+
+    gap: 2.5vw;
+
 }
 
 @media(max-width:780px){
+    .swiper-wrapper{
+        display: block;
+        margin-left: 10vw;
+        margin-top:25vw;
+    }
     .wline{
         position: absolute;
         font-family: 'Nohemi';
@@ -668,32 +679,14 @@ margin-bottom: 1em;
         left: 6vh;
     }
      
-    .work-container{
-        display: none;
-    }
-    .work{
-        display: flex;
-        width: 50vw ;
-        height: 50%;
-    }
-    .work-swiper{
-        display: flex;
-    }
-    .work-description{
-        width: 50vw;
-    }
+   .work-img{
+    width: 50vw;
+   }
+   .work-description{
+    width: 50vw;
+   }
 }
 
-.swiper-wrapper .work{
-    width: 100vw;
-    margin: 25vh auto 0 auto;
-    padding-left: 10vw;
-    img{
-        width: 50vw;
-        padding-left: 0vw;
-    }
-
-}
 
 
 
