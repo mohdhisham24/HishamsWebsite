@@ -687,7 +687,10 @@ margin-bottom: 1em;
    }
 }
 
-
+.clickhere{
+    font-family: poppins;
+    color:#0251D3 ;
+}
 
 
 /* journey */
@@ -812,6 +815,9 @@ top: 0;
 
 .hispic{
     height: 50vh;
+}
+.sum{
+    font-size: 28px;
 }
 @media(max-width:780px){
     #me{
