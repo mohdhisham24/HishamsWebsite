@@ -369,7 +369,7 @@ padding-left: 0.25em;
     height: 20vh;
     width:100vw;
     z-index: 2;
-    background:linear-gradient(to top, #000a0893,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
+    background:linear-gradient(to top, #1b1b1b93,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
     /* display: none; */
     top:80vh;
 }
