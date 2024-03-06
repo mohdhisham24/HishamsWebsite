@@ -696,6 +696,7 @@ margin-bottom: 1em;
 .clickhere{
     font-family: poppins;
     color:#0251D3 ;
+    text-decoration: none;
 }
 
 
@@ -814,6 +815,7 @@ top: 0;
     font-family: 'Nohemi';
     font-size: 30px;
     width: 390px;
+    a{text-decoration: none;}
 }
 .sumhead{
     font-size: 40px;
@@ -828,6 +830,7 @@ top: 0;
     margin-top: 2em;
     border-radius: 5px;
     border: 1px solid white;
+
     /* transition: background-color,color 0.3s ease-in-out; */
 }
 /* .say-hello:hover{
