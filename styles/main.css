@@ -616,7 +616,9 @@ footer{
 }
 
 /* work section */
-
+.work{
+    width: 15vw;
+}
 .worksay{
     top: 0;
     position: absolute;
